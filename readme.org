@@ -1,4 +1,1 @@
-1. This site can't be reached
-2. Open https://sundawning.gitee.io/javascript-this-site-can-not-be-reached/
-3. Type a URL that can't be reached
-4. Go
+https://sundawning.gitee.io/javascript-this-site-can-not-be-reached/

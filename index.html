@@ -52,7 +52,7 @@
     <div id="root">
       <img id="logo" hidefocus="true" src="google_logo.svg">
       <div id="search">
-        <input type="text" id="url" placeholder="Type a URL that can't be reached"/>
+        <input type="text" id="url" placeholder="Search Google or type a URL that can't be reached"/>
         <button id="submit">Go</button>
       </div>
     </div>
@@ -70,7 +70,8 @@
           let url=document.getElementById("url").value
           if(url===""){
             return browseURL("https://gist.github.com/jimmywarting/ac1be6ea0297c16c477e17f8fbe51347")}
-          if(!isValidURL(url)){return}
+          if(!isValidURL(url)){
+            return browseURL("https://www.google.com/search?q="+url)}
           browseURL(url)
         }
         function isValidURL(url){
