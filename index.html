@@ -65,7 +65,7 @@
           if(event.keyCode===13){
             onSubmit()}}
         function browseURL(url){
-          window.location.href="https://thingproxy.freeboard.io/fetch/"+url}
+          window.open("https://thingproxy.freeboard.io/fetch/"+url)}
         function onSubmit(event){
           let url=document.getElementById("url").value
           if(url===""){
