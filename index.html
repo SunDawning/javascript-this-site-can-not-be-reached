@@ -47,7 +47,9 @@
         background-color: #34a853;
       }
       #debug{
-        text-align:center;
+        max-width: 640px;
+        width: 100%;
+        margin: auto;
       }
     </style>
   </head>
@@ -71,20 +73,21 @@
             onSubmit()}}
         function browseURL(url){
           let debug=document.getElementById("debug")
-          debug.innerText="Loading "+url+" ..."
-          let request=get({
+          get({
             url:url,
+            onReadyStateChange:function(event){
+              let request=event.currentTarget
+              if(request.readyState===3){return}
+              let currentURL=request.responseURL
+              if(!currentURL){currentURL=url}
+              let text=[currentURL,request.readyState,request.status].join(" ")
+              console.log(text)
+              debug.innerText=debug.innerText+text+"\n"
+            },
             onLoad:function(text){
               document.write(text)
           }})
-          let n=0
-          request.addEventListener("error",function(event){
-            debug.innerText="Retrying ..."
-            n=n+1
-            if(n>1){
-              debug.innerText="This site can't be reached."
-            }
-        })}
+        }
         function onSubmit(event){
           let url=document.getElementById("url").value
           if(url===""){

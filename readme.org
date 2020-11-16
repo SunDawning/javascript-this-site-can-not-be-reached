@@ -1,5 +1,7 @@
 1. This site can't be reached
-2. Open https://sundawning.gitee.io/javascript-this-site-can-not-be-reached/
+2. Open
+   - https://sundawning.gitee.io/javascript-this-site-can-not-be-reached/
+   - https://sundawning.github.io/javascript-this-site-can-not-be-reached/index.html
 3. Type a URL that can't be reached
 4. Go
 5. (Optional) Refresh(F5)
